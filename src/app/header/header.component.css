@@ -58,8 +58,14 @@ display: none;
 
 @media(max-width : 50rem) {
     
-    .header_mode {
+    .options {
         display: none;
+    }
+    .head_line {
+        right: 2%;
+        left: auto;
+        font-size: 18px;
+        top: 25%;
     }
 
     #sidebar {
