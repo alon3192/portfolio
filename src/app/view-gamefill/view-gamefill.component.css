@@ -1,0 +1,90 @@
+.container {
+    
+    background: skyblue;
+    overflow: hidden;
+    padding: 20px;
+}
+.img_container {
+    
+    display: flex;
+    animation: move_container 50s 0s infinite;
+}
+
+.image_app {
+    height: 450px;
+    margin-left: 115px;
+}
+
+.image_app:hover {
+    border: 3px red solid;
+    box-sizing: border-box;
+}
+
+.description {
+    padding: 10px;
+    font-weight: bold;
+    border: green 3px solid;
+    width: 80%;
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 15px;
+}
+
+.description:hover {
+    background: green;
+    color: white;
+    border: black 3px solid;
+}
+
+@media(max-width : 50rem) {
+    .img_container {
+        animation: move_container_phone 60s 0s infinite;
+    }
+    .image_app {
+        height: 350px;
+        margin-left: 70px;
+    }
+}
+
+
+@keyframes move_container {
+
+    0% {
+        position: relative;
+        left: 0;
+    }
+    45% {
+        left: calc(100% - 3100px);
+    }
+    50% {
+        left: calc(100% - 3100px);
+    }
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes move_container_phone {
+
+    0% {
+        position: relative;
+        left: 0;
+    }
+    
+    48% {
+        left: calc(100% - 2200px);
+    }
+    50% {
+        left: calc(100% - 2200px);
+    }
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+
+
+
+

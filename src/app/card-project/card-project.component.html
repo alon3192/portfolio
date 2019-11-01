@@ -1,0 +1,10 @@
+<div class="cards" id="projects">
+   <div *ngFor="let project of projects" class="card" (click)="projectClicked(project)">
+      <img src="../../assets/images/{{project.image}}" alt="">
+      <div id="stamp">{{writeContent(project)}}</div>
+      <h2> {{project.name}}</h2>
+      <p>{{project.description}}</p>
+   </div>
+   
+</div>
+

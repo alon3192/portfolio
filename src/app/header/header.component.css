@@ -1,0 +1,77 @@
+.header {
+    height: 60px;
+    background: rgba(2,180,255,.8);
+    position: relative;
+    font-family: 'Staatliches', cursive;
+}
+
+
+.options {
+    list-style: none;
+    display: flex;
+    right: 20px;
+    position: absolute;
+    top: 25%;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.options li {
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.options li:hover,
+.options li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.options li a {
+    text-decoration: none;
+    color: black;
+}
+
+.head_line {
+    position: absolute;
+    top: 15%;
+    padding: 5px;
+    left: 2%;
+    font-size: 22px;
+    margin: 0;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+}
+#sidebar {
+    display: none;
+    cursor: pointer;
+}
+
+
+.no_touched {
+display: none;
+}
+
+
+
+@media(max-width : 50rem) {
+    
+    .header_mode {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        left: 20px;
+    }
+    #sidebar img {
+        width: 100%;
+        }
+   
+}
