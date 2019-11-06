@@ -24,14 +24,18 @@
 }
 
 .card img {
-    max-height: 60%;
-    max-width: 80%;
+   /* height: 60%;*/
+    width: 80%;
     margin-left: 10%;
     margin-top: 10%;
 }
 
 .card img:hover {
     animation: image_increase 1s 0s 1 forwards;
+}
+
+#Safun {
+    margin-top: 7.5%;
 }
 
 .card p {

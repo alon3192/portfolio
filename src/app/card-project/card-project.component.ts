@@ -26,6 +26,7 @@ export class CardProjectComponent implements OnInit {
     }
     else
     {
+      window.scroll(0,0);
       this.router.navigate([project.name]);
     }
   }

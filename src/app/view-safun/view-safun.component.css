@@ -41,6 +41,48 @@
     border: black 3px solid;
 }
 
+h2 {
+    text-align: center;
+    margin: 0;
+    font-family: 'Aclonica', sans-serif;
+}
+h2 span {
+    opacity: 0;
+}
+
+span:nth-child(1) {
+    animation: left_appear 2s 1s 1 forwards;
+}
+span:nth-child(2) {
+    animation: bottom_appear 2s 0s 1 forwards;
+}
+span:nth-child(3) {
+    animation: top_appear 2s 0s 1 forwards;
+}
+span:nth-child(4) {
+    animation: bottom_appear 2s 0s 1 forwards;
+}
+span:nth-child(5) {
+    animation: right_appear 2s 1s 1 forwards;
+}
+
+
+.logo_div {
+    
+    margin: auto;
+    height: 200px;
+}
+
+.logo_div img {
+    margin-top: 0;
+    display: block;
+    height: 100%;
+    opacity: 0;
+    animation: logo_appear_s 1.5s 2.5s 1 forwards  
+}
+
+
+
 .book {
     cursor: pointer;
     text-align: center;
@@ -64,7 +106,9 @@
 
 @media(max-width : 50rem) {
     .img_container {
-        animation: move_container_phone 90s 0s infinite;
+        animation: move_container_phone 120s 0s infinite forwards;
+        position: relative;
+        left: calc(50% - 150px);  
     }
     .image_app {
         height: 350px;
@@ -77,7 +121,7 @@
 
     0% {
         position: relative;
-        left: 0;
+        left: 0px;
     }
     45% {
         left: calc(100% - 5000px);
@@ -93,20 +137,188 @@
 
 @keyframes move_container_phone {
 
+    
     0% {
-        position: relative;
-        left: 0;
+        left: calc(50% - 150px); 
+    }
+    3.5% {
+        left: calc(50% - 390px); 
+    }
+    7% {
+        left: calc(50% - 630px);
+    }
+    10.5% {
+        left: calc(50% - 870px);
+    }
+    14% {
+        left: calc(50% - 1110px);  
+    }
+    17.5% {
+        left: calc(50% - 1350px);   
+    }
+    21% {
+        left: calc(50% - 1590px);  
+    }
+    24.5% {
+        left: calc(50% - 1830px);  
+    }
+    28% {
+        left: calc(50% - 2070px);  
+    }
+    31.5% {
+        left: calc(50% - 2310px);  
+    }
+    35% {
+        left: calc(50% - 2550px);  
+    }
+    38.5% {
+        left: calc(50% - 2790px);  
+    }
+    42% {
+        left: calc(50% - 3030px);  
+    }
+    45.5% {
+        left: calc(50% - 3270px);  
+    }
+    49% {
+        left: calc(50% - 3510px); 
     }
     
-    48% {
-        left: calc(100% - 3600px);
-    }
     50% {
-        left: calc(100% - 3600px);
+        left: calc(50% - 3510px);  
+    }
+    53.5% {
+        left: calc(50% - 3270px);  
+    }
+    57% {
+        left: calc(50% - 3030px);    
+    }
+    60.5% {
+        left: calc(50% - 2790px);  
+    }
+    64% {
+        left: calc(50% - 2550px); 
+    }
+    67.5% {
+        left: calc(50% - 2310px);  
+    }
+    71% {
+        left: calc(50% - 2070px); 
+    }
+    74.5% {
+        left: calc(50% - 1830px); 
+    }
+    78% {
+        left: calc(50% - 1590px);  
+    }
+    81.5% {
+        left: calc(50% - 1350px);  
+    }
+    85% {
+        left: calc(50% - 1110px);
+    }
+    88.5% {
+        left: calc(50% - 870px);
+    }
+    92% {
+        left: calc(50% - 630px);
+    }
+    95.5% {
+        left: calc(50% - 390px); 
+    }
+    99% {
+        left: calc(50% - 150px); 
     }
     100% {
         position: relative;
+        left: calc(50% - 150px);  
+    }
+}
+
+
+
+@keyframes left_appear {
+    from {
+        left: -1000px;
+        position: relative;
+        opacity: 0;
+    }
+    to {
         left: 0;
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes bottom_appear {
+    from {
+        bottom: -1000px;
+        position: relative;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes top_appear {
+    from {
+        top: -1000px;
+        position: relative;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes right_appear {
+    from {
+        right: -1000px;
+        position: relative;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes logo_appear_s {
+    0% {
+        margin-left: -300px;
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+
+   
+    50% {
+        transform: rotateZ(-45deg);
+    }
+   
+    60% {
+        margin-left: 60%;
+        opacity: 1;  
+    }
+    
+    
+    99% {
+        margin-left: calc(50% - 98px);
+        width: auto;
+        opacity: 1;
+        margin-right: auto;
+    }
+    100% {
+        margin-right: auto;
+        margin-left: auto;
+        width: auto;
+        opacity: 1;
+        transform: rotateZ(0deg);
     }
 }
 
