@@ -245,13 +245,15 @@ span:nth-child(8) {
 
    
     50% {
-        transform: rotateZ(280deg);
+        transform: rotateZ(330deg);
+        margin-left: 60%;
+        opacity: 1; 
     }
    
     60% {
         margin-left: 60%;
         opacity: 1;  
-        transform: rotateZ(280deg);
+        transform: rotateZ(330deg);
     }
     
     
