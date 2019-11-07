@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Project } from './project.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,17 @@ export class DataService {
     new Project("Gamefill", "soccer_icon.png", "An app for the Android devices that write console games results. Displays various tables and statistics."),
     new Project("Shopping-list", "shopping_icon.jpg", "A project based on a website that helps organize the shopping list.")
   ];
+  optionsChanged = new Subject<boolean>();
 
   constructor() { }
 
   getProjects()
   {
     return this.projects.slice();
+  }
+  setOptions(mode:boolean)
+  {
+    this.optionsChanged.next(mode);
   }
 }
 
