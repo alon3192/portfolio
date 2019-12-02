@@ -10,11 +10,16 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
-  openResume()
+ 
+  openLinkedin()
   {
-    window.open("https://drive.google.com/open?id=1SH-qnUmE4urKjsfwgw8I7iN_3xrSsh27");
+    window.open("https://www.linkedin.com/in/alon-moshe-79b80118a/");
   }
+
+
+  
 
 }

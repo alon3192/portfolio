@@ -11,6 +11,9 @@ import { ViewSafunComponent } from './view-safun/view-safun.component';
 import { ViewGamefillComponent } from './view-gamefill/view-gamefill.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyselfComponent } from './myself/myself.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -23,11 +26,14 @@ import { AppRoutingModule } from './app-routing.module'
     FooterComponent,
     ViewSafunComponent,
     ViewGamefillComponent,
-    HomeComponent
+    HomeComponent,
+    MyselfComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

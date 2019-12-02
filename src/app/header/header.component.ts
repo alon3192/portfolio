@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() { 
 
+    /*
     if(this.location.path() !== '')
     {
       var pro = document.getElementById("pro");
@@ -55,18 +56,17 @@ export class HeaderComponent implements OnInit {
           var pro = document.getElementById("pro");
           var abo = document.getElementById("abo");
 
-          pro.style.color = "black";
+          pro.style.color = "'white'";
           pro.style.cursor = "pointer";
           
-          abo.style.color = "black";
+          abo.style.color = "white";
           abo.style.cursor = "pointer";
 
           
             pro.addEventListener('mouseover', e => {
               if(this.mode)
               {
-                pro.style.color = "white";
-                pro.style.textDecoration = "underline";
+                pro.style.background = "rgb(70, 70, 70)";
               }
               
             });
@@ -84,7 +84,6 @@ export class HeaderComponent implements OnInit {
               if(this.mode)
               {
                 abo.style.color = "white";
-                abo.style.textDecoration = "underline";
               }
               
             });
@@ -100,6 +99,12 @@ export class HeaderComponent implements OnInit {
         }
       }
     ); 
+    */
+  }
+
+  openResume()
+  {
+    window.open("https://drive.google.com/open?id=1QOwqCxkfnCuCVMbQieCwyUMtotXmNz8P");
   }
 
   setOptionsMode()

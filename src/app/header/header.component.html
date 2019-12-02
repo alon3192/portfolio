@@ -3,9 +3,9 @@
 <div class="header">
     <div class="header_mode">
         <ol class="options">
-            <li id="pro" (click)="sectionMove('projects')">Projects</li>
-            <li id="abo" (click)="sectionMove('about')" >About</li>
             <li><a routerLink="/" (click)="setOptionsMode()"> Home</a></li>
+            <li id="abo" (click)="sectionMove('about')" >About</li>
+            <li id="pro" (click)="openResume()">Resume</li> 
         </ol>
         <h3 class="head_line">Alon Moshe - Portfolio</h3>
     </div>

@@ -2,51 +2,71 @@
     font-family: 'Poppins', sans-serif;
 }
 
+h4 {
+    /*text-align: center;*/
+    color: white;
+    text-decoration: underline;
+    margin: 0;
+    padding-top: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+h4:hover {
+    color: beige;
+}
+
 .cards {
     display: flex;
     padding: 20px;
     justify-content: center;
+    text-align: center;
+    height: 462px;
 }
 
 .card {
-    background: burlywood;
-    margin-left: 10px;
     width: 30%;
     cursor: pointer;
-    background-image: linear-gradient(rgba(64, 159, 255, 0.85), rgba(179,255,255,0.85));
+   /* background-image: linear-gradient(rgba(64, 159, 255, 0.85), rgba(179,255,255,0.85));*/
     position: relative;
     overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.card:hover {
+    animation: image_increase 0.5s 0s 1;
 }
 
 .card h2 {
-    text-align: center;
     margin: 0;
+    color: white;
+    margin: 0;
+   margin-top: 10px;
 }
 
 .card img {
    /* height: 60%;*/
     width: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
-.card img:hover {
-    animation: image_increase 1s 0s 1 forwards;
-}
 
+/*
 #Safun {
     margin-top: 7.5%;
-}
+}*/
 
 .card p {
     padding: 15px;
     margin: 0; 
-    font-weight: bold;
+    color: white;
 }
 
 #stamp {
     position: absolute;
-    background: red;
+    background: gray;
     right: -30px;
     top: 25px;
     padding: 2px;
@@ -54,47 +74,70 @@
     text-align: center;
     transform: rotateZ(45deg);
     font-family: 'Courgette', cursive;
+    color: white;
 }
 
-@media(max-width : 50rem) {
+@media(max-width : 58rem) {
     .cards {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: auto;
     }
-
     .card {
         margin: auto;
         margin-bottom: 20px;
-        width: 80%;
+        width: 90%;
         height: auto;
     }
 
     .card img {
         height: 150px;
         width: auto;
-        text-align: center;
         margin: auto; 
         margin-top: 15px; 
         display: block;
     }
+
+    .card h2 {
+        margin-left: 0;
+        
+    }
+
+    .border1, .border0 {
+        background-image: url("../../assets/images/background.jpg");
+        height: 10px;
+        width: 100%;
+    }
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    
+
+   /* .border:last-of-type
+    {
+        background-image: none;
+        height: 0;
+        width: 0;
+    }*/
     
 }
 
 
 @keyframes image_increase {
     0% {
-        transform: rotateZ(0deg);
+        
     }
-    33% {
-        transform: rotateZ(75deg);
+    50% {
+        margin-top: 0;
     }
-    67% {
-        transform: rotateZ(-75deg);
-    }
+   
     100% {
-        transform: rotateZ(0deg);
+       
+        
     }
     
 }
