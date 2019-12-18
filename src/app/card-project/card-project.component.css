@@ -18,14 +18,14 @@ h4:hover {
 
 .cards {
     display: flex;
-    padding: 20px;
+    padding: 0px;
     justify-content: center;
     text-align: center;
     height: 462px;
 }
 
 .card {
-    width: 30%;
+    width: 25%;
     cursor: pointer;
    /* background-image: linear-gradient(rgba(64, 159, 255, 0.85), rgba(179,255,255,0.85));*/
     position: relative;
@@ -44,6 +44,7 @@ h4:hover {
     color: white;
     margin: 0;
    margin-top: 10px;
+   font-size: 22px;
 }
 
 .card img {

@@ -24,6 +24,10 @@ export class CardProjectComponent implements OnInit {
     {
       window.open('https://shopping-list-d9877.firebaseapp.com/');
     }
+    else if(project.name === 'Meal Tracking')
+    {
+      window.open('https://meal-tracking-86b90.firebaseapp.com/');
+    }
     else
     {
       this.dataService.setOptions(false);
