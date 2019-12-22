@@ -30,8 +30,7 @@ p {
     
     background: transparent;
     margin: 10px 10px;
-    width: auto;
-    height: auto;
+    
 }
 
 
@@ -41,68 +40,6 @@ img {
    
 }
 
-.tooltiptext {
-    color: white;
-    padding: 5px;
-    background: #333;
-    margin-bottom: 15px;
-    position: absolute;
-    z-index: 1;
-    position: absolute;
-    opacity: 0;
-}
-
-.bottom {
-    top: 60px;
-    right: 2%;
-}
-
-.top {
-    top: 60px;
-    right: 12%;
-}
-
-.short {
-    top: 60px;
-    right: 25%;
-}
-.c {
-    top: 60px;
-    right: 35%;
-}
-.long {
-    top: 60px;
-    right: -8px;
-}
-.right {
-    top: 60px;
-    right: 19%;
-}
-.vb {
-    top: 60px;
-    right: 4%;
-}
-
-.css {
-    top: 60px;
-    right: 16%;
-}
-.firebase {
-    top: 60px;
-    right: -5px;
-}
-
-
-.comment {
-    text-align: center;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-
-
 .comment:hover > .tooltiptext {
     animation: show_comment 0.5s 0s 1 forwards;
  }
@@ -111,7 +48,14 @@ img {
     animation: increase_size 0.5s 0s 1;
  }
  
- 
+ .img_container span {
+    display:none;
+ }
+ .img_container:hover span {
+    
+    position:fixed;
+    overflow:hidden;
+}
 
 
 @keyframes show_comment {
@@ -139,20 +83,14 @@ img {
 
 @keyframes increase_size {
     0% {
-        width: 48px;
-        height: 48px;
+        transform: scale(1);
     }
     50% {
-        width: 60px;
-        height: 60px;
-        margin: 0;
-        margin-left: 4.5px;
-        margin-right: 4.5px;
+        transform: scale(1.2);
         
     }
     100% {
-        width: 48px;
-        height: 48px;
+        transform: scale(1);
     }
     
 }

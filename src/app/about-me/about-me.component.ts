@@ -10,6 +10,14 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var java = document.getElementsByClassName[1]('img_container');
+    window.onmousemove = function (e) {
+      var x = e.clientX,
+          y = e.clientY;
+          java.style.top = (y + 20) + 'px';
+          java.style.left = (x + 20) + 'px';
+  };
   }
+  
 
 }
