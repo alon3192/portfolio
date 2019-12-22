@@ -87,6 +87,10 @@ img {
     top: 60px;
     right: 16%;
 }
+.firebase {
+    top: 60px;
+    right: -5px;
+}
 
 
 .comment {

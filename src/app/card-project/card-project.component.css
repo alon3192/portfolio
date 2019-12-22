@@ -106,7 +106,7 @@ h4:hover {
         
     }
 
-    .border1, .border0 {
+    .border1, .border0, .border2 {
         background-image: url("../../assets/images/background.jpg");
         height: 10px;
         width: 100%;
