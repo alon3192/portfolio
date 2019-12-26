@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Detail } from '../detail.model';
 
 @Component({
   selector: 'app-about-me',
@@ -7,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
+
+
+  languages:Detail[] = [];
+  workspaces:Detail[] = [];
+  databases:Detail[] = [];
 
   ngOnInit() {
-    var java = document.getElementsByClassName[1]('img_container');
-    window.onmousemove = function (e) {
-      var x = e.clientX,
-          y = e.clientY;
-          java.style.top = (y + 20) + 'px';
-          java.style.left = (x + 20) + 'px';
-  };
+   this.languages = this.dataService.getLanguages();
+   this.workspaces = this.dataService.getWorkspaces();
+   this.databases = this.dataService.getDatabases();
+   console.log(this.databases)
   }
   
 
