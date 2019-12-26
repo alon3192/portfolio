@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
@@ -104,7 +104,7 @@ export class HeaderComponent implements OnInit {
 
   openResume()
   {
-    window.open("https://drive.google.com/open?id=1GQSolWq6OYxBb64wOZw0-e9tjPm5ODYI");
+    window.open("https://drive.google.com/open?id=1f8ZaIhNQz3Qe_GI1gy3PC-4TLqI8gWhH");
   }
 
   setOptionsMode()
