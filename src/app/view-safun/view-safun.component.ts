@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-view-safun',
   templateUrl: './view-safun.component.html',
-  styleUrls: ['./view-safun.component.css']
+  styleUrls: ['./view-safun.component.scss']
 })
 export class ViewSafunComponent implements OnInit {
 

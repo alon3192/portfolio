@@ -1,0 +1,57 @@
+.container {
+    overflow: hidden;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    & .logo_div {
+    
+        margin: auto;
+        height: 200px;
+        margin-bottom: 7px;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            height: 100%;
+        }
+    }
+    & h2 {
+        text-align: center;
+        margin: 0;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    & .description {
+        padding: 15px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 15px;
+        color: white;
+    }
+    & .img_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 450px;
+
+        & img {
+            height: 100%;
+            position: relative;
+        }
+    }
+    & #forward {
+        order: 1;
+        cursor: pointer;
+    }
+    & #back {
+        cursor: pointer;
+    }
+
+}

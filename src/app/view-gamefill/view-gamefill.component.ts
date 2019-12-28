@@ -6,7 +6,7 @@ import {trigger,state,style,animate,transition} from '@angular/animations';
 @Component({
   selector: 'app-view-gamefill',
   templateUrl: './view-gamefill.component.html',
-  styleUrls: ['./view-gamefill.component.css']
+  styleUrls: ['./view-gamefill.component.scss']
 })
 export class ViewGamefillComponent implements OnInit {
 
