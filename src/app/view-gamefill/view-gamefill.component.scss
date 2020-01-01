@@ -54,4 +54,31 @@
         cursor: pointer;
     }
 
+    .moving_forward {
+        animation-name: moveforward;
+        animation-duration: 2s;
+    }
+
+    @keyframes moveforward {
+        0%{ left: 0px; }
+        50%{ left: 1300px; }
+        51% { left: -1300px; }
+        100% { left: 0px; }
+    }
+
+    .moving_back {
+        animation-name: moveback;
+        animation-duration: 2s;
+    }
+
+    @keyframes moveback {
+        0%{ left: 0px; }
+        50%{ left: -1300px; }
+        51% { left: 1300px; }
+        100% { left: 0px; }
+    }
+
+}
+.upload {
+    display: none;
 }

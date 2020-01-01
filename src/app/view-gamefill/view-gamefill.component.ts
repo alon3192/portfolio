@@ -14,19 +14,36 @@ export class ViewGamefillComponent implements OnInit {
   minNumber = 1;
   maxNumber = 9;
   currentNumber = 1;
+  pic;
 
-  ngOnInit(){ }
+  ngOnInit(){
+    this.pic = document.getElementById("image");
+   }
 
-  
 
-  moveBack()
+  goForward()
   {
+    if(this.currentNumber === this.maxNumber)
+    {
+      this.currentNumber = this.minNumber;
+    }
+    else
+    {
+      this.currentNumber++;
+    }
+    setTimeout(()=>{    
+      this.pic.setAttribute("src", "../../assets/images/gamefill_" + this.currentNumber + ".jpg");
+    }, 1000);
+    
+    this.pic.classList.add("moving_forward");
 
-    var audio = new Audio();
-    audio.src = "../../assets/sounds/Stapling-Paper.mp3";
-    audio.load();
-    audio.play();
-
+    setTimeout(()=>{    
+      this.pic.classList.remove("moving_forward");
+    }, 2100);
+  }
+  
+  goBack()
+  {
     if(this.currentNumber === 1)
     {
       this.currentNumber = this.maxNumber;
@@ -35,52 +52,15 @@ export class ViewGamefillComponent implements OnInit {
     {
       this.currentNumber--;
     }
-    var image = document.getElementById("image");
+    setTimeout(()=>{    
+      this.pic.setAttribute("src", "../../assets/images/gamefill_".concat(this.currentNumber.toString()).concat(".jpg"));
+    }, 1000);
+    
+    this.pic.classList.add("moving_back");
 
-    image.animate([
-      // keyframes
-      { transform: 'rotateZ(0deg)' }, 
-      { transform: 'rotateZ(-20deg)'},
-      { transform: 'rotateZ(0deg)' },
-    ], { 
-      // timing options
-      duration: 600,
-      iterations: 1
-    });
-
-    image.setAttribute("src", "../../assets/images/gamefill_" + this.currentNumber + ".jpg");
-  }
-
-  moveForward()
-  {
-
-    var audio = new Audio();
-    audio.src = "../../assets/sounds/Stapling-Paper.mp3";
-    audio.load();
-    audio.play();
-
-    if(this.currentNumber === this.maxNumber)
-    {
-      this.currentNumber = 1;
-    }
-    else
-    {
-      this.currentNumber++;
-    }
-    var image = document.getElementById("image");
-
-    image.animate([
-      // keyframes
-      { transform: 'rotateZ(0deg)' }, 
-      { transform: 'rotateZ(20deg)'},
-      { transform: 'rotateZ(0deg)' },
-    ], { 
-      // timing options
-      duration: 600,
-      iterations: 1
-    });
-
-    image.setAttribute("src", "../../assets/images/gamefill_" + this.currentNumber + ".jpg");
+    setTimeout(()=>{    
+      this.pic.classList.remove("moving_back");
+    }, 2100);
   }
 
 }

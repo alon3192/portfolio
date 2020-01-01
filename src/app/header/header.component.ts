@@ -12,94 +12,45 @@ export class HeaderComponent implements OnInit {
 
   subscription:Subscription;
   mode:boolean = true;
-  
+  header = document.getElementById('header');
+  abo = document.getElementById("abo");
+  res = document.getElementById("res");
+  home = document.getElementById("home");
   
 
-  constructor(private dataService:DataService, private location: Location) { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit() { 
+    
+     window.addEventListener("scroll", this.changeClassName)
+     
+  }
 
-    /*
-    if(this.location.path() !== '')
-    {
-      var pro = document.getElementById("pro");
-      var abo = document.getElementById("abo");
+ 
 
-      pro.style.color = "gray";
-      pro.style.cursor = "auto";
-      pro.style.textDecoration = "none";
-          
-      abo.style.color = "gray";
-      abo.style.cursor = "auto";
-      abo.style.textDecoration = "none";
+  changeClassName()
+  {
+    let last_known_scroll_position = 0;
+    last_known_scroll_position = window.scrollY;
+    
+    
+    if(last_known_scroll_position === 0) {
+      this.header.classList.remove('scroll_down');
+      this.header.classList.add('scroll_back');
+
+      this.abo.classList.remove('scroll_down_li');
+      this.res.classList.remove('scroll_down_li');
+      this.home.classList.remove('scroll_down_li');
     }
+    else {
+      this.header.classList.remove('scroll_back');
+      this.header.classList.add('scroll_down');
 
-    this.subscription = this.dataService.optionsChanged.subscribe(
-      (mode: boolean) => {
-        this.mode = mode
-        
-        if(!this.mode)
-        {
-          var pro = document.getElementById("pro");
-          var abo = document.getElementById("abo");
-
-          pro.style.color = "gray";
-          pro.style.cursor = "auto";
-          pro.style.textDecoration = "none";
-          
-          abo.style.color = "gray";
-          abo.style.cursor = "auto";
-          abo.style.textDecoration = "none";
-        }
-        else
-        {
-          var pro = document.getElementById("pro");
-          var abo = document.getElementById("abo");
-
-          pro.style.color = "'white'";
-          pro.style.cursor = "pointer";
-          
-          abo.style.color = "white";
-          abo.style.cursor = "pointer";
-
-          
-            pro.addEventListener('mouseover', e => {
-              if(this.mode)
-              {
-                pro.style.background = "rgb(70, 70, 70)";
-              }
-              
-            });
-  
-            pro.addEventListener('mouseleave', e => {
-              if(this.mode)
-              {
-                pro.style.color = "black";
-                pro.style.textDecoration = "none";
-              }
-              
-            });
-  
-            abo.addEventListener('mouseover', e => {
-              if(this.mode)
-              {
-                abo.style.color = "white";
-              }
-              
-            });
-  
-            abo.addEventListener('mouseleave', e => {
-              if(this.mode)
-              {
-                abo.style.color = "black";
-                abo.style.textDecoration = "none";
-              }
-              
-            });  
-        }
-      }
-    ); 
-    */
+      this.abo.classList.add("scroll_down_li");
+      this.res.classList.add("scroll_down_li");
+      this.home.classList.add("scroll_down_li");
+    }
+   
   }
 
   openResume()

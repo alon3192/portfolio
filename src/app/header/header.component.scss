@@ -9,6 +9,9 @@
     position: relative;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
     &_mode {
         & .options {
@@ -16,29 +19,52 @@
         display: flex;
         right: 17%;
         position: absolute;
-        bottom: -6px;
-        padding: 5px;
+        padding: 0;
         font-size: 1.2rem;
         margin: 0;
-
+        &:hover li {
+          /*  transform: scale(1.5);*/
+            opacity: 0.2;
+            filter: blur(5px);
+        }
             & li {
+                
                 margin-left: 35px;
                 cursor: pointer;
                 color: white;
                 padding: 6px;
                 box-sizing: border-box;
-                
-            }
-            & a {
-                text-decoration: none;
-                color: white; 
-            }
-            & li:hover,
-            & a:hover {
-                color: white;
-                background: rgb(70, 70, 70);
-            }
+                transition: 0.5s;
+                text-transform: uppercase;
 
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(70, 70, 70);
+                    transition: 0.5s;
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    z-index: -1;
+                    }
+                &:hover
+                {
+                    color: white;
+                    background: rgb(70, 70, 70); 
+                    opacity: 1;
+                    filter: blur(0);
+
+                    &::before {
+                        transition: transform 0.5s;
+                        transform-origin: left;
+                        transform: scaleX(1);
+                    }
+                } 
+            }
+           
         }
         & .head_line {
         position: absolute;
@@ -57,6 +83,31 @@
         cursor: pointer;
     }
 }
+
+.scroll_down {
+    animation-name: color_change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.scroll_back {
+    animation-name: color_change_back;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+
+.scroll_down_li {
+    background: transparent !important;
+    padding-bottom: 13px !important;
+    padding-top: 12px !important;
+}
+
+.scroll_down_li:before {
+    background: rgb(123, 154, 190) !important;
+}
+
 
 @media(max-width : 58rem) {
     
@@ -86,4 +137,27 @@
         }
     }
    
+}
+
+@keyframes color_change {
+    from { 
+        background: rgb(48, 47, 44); 
+        height: 40px;
+    }
+    to { 
+        background: rgb(56, 85, 124);
+        height: 55px;
+     }
+  
+}
+
+@keyframes color_change_back {
+   from { 
+    background: rgb(56, 85, 124);
+       height: 55px;
+     }
+    to { 
+        background: rgb(48, 47, 44);
+        height: 40px;
+     }
 }

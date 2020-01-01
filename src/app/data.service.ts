@@ -90,13 +90,13 @@ export class DataService {
     })
   }
 
-  newEnterToTheWebsite()
+  newEnteryToTheWebsite()
   {
     
     const d: Date = new Date();
     d.setHours(d.getHours()+2);
     this.arrivals.push(d);
-    this.http.post('https://portfolio-b36b9.firebaseio.com/newEnter.json',this.arrivals).subscribe(
+    this.http.post('https://portfolio-b36b9.firebaseio.com/newEntery.json',this.arrivals).subscribe(
       responseData=>{
       })
   }

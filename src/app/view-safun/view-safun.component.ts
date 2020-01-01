@@ -10,53 +10,19 @@ export class ViewSafunComponent implements OnInit {
   minNumber = 1;
   maxNumber = 15;
   currentNumber = 1;
+  pic;
   
 
   constructor() { }
 
   ngOnInit() {
+    this.pic = document.getElementById("image"); 
+    
   }
 
-  moveBack()
+  
+  goForwoard()
   {
-    var audio = new Audio();
-    audio.src = "../../assets/sounds/Stapling-Paper.mp3";
-    audio.load();
-    audio.play();
-
-    if(this.currentNumber === 1)
-    {
-      this.currentNumber = this.maxNumber;
-    }
-    else
-    {
-      this.currentNumber--;
-    }
-    var image = document.getElementById("image");
-
-    image.animate([
-      // keyframes
-      { transform: 'rotateZ(0deg)' }, 
-      { transform: 'rotateZ(-20deg)'},
-      { transform: 'rotateZ(0deg)' },
-    ], { 
-      // timing options
-      duration: 600,
-      iterations: 1
-    });
-
-    image.setAttribute("src", "../../assets/images/safun_" + this.currentNumber + ".jpg");
-  }
-
-  moveForward()
-  {
-
-    var audio = new Audio();
-    audio.src = "../../assets/sounds/Stapling-Paper.mp3";
-    audio.load();
-    audio.play();
-
-
     if(this.currentNumber === this.maxNumber)
     {
       this.currentNumber = this.minNumber;
@@ -65,20 +31,35 @@ export class ViewSafunComponent implements OnInit {
     {
       this.currentNumber++;
     }
-    var image = document.getElementById("image");
+    setTimeout(()=>{    
+      this.pic.setAttribute("src", "../../assets/images/safun_".concat(this.currentNumber.toString()).concat(".jpg"));
+    }, 1000);
+    
+    this.pic.classList.add("moving_forward");
 
-    image.animate([
-      // keyframes
-      { transform: 'rotateZ(0deg)' }, 
-      { transform: 'rotateZ(20deg)'},
-      { transform: 'rotateZ(0deg)' },
-    ], { 
-      // timing options
-      duration: 600,
-      iterations: 1
-    });
+    setTimeout(()=>{    
+      this.pic.classList.remove("moving_forward");
+    }, 2100);
+  }
+  goBack()
+  {
+    if(this.currentNumber === 1)
+    {
+      this.currentNumber = this.maxNumber;
+    }
+    else
+    {
+      this.currentNumber--;
+    }
+    setTimeout(()=>{    
+      this.pic.setAttribute("src", "../../assets/images/safun_".concat(this.currentNumber.toString()).concat(".jpg"));
+    }, 1000);
+    
+    this.pic.classList.add("moving_back");
 
-    image.setAttribute("src", "../../assets/images/safun_" + this.currentNumber + ".jpg");
+    setTimeout(()=>{    
+      this.pic.classList.remove("moving_back");
+    }, 2100);
   }
 
 

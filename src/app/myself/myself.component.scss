@@ -1,15 +1,18 @@
 * {
     font-family: 'Poppins', sans-serif;
+    color: white;
 }
+
 
 .container {
     background: rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-size: 1rem;
+
 
     & h4 {
-        color: white;
         text-decoration: underline;
         margin: 0;
         width: fit-content;
@@ -20,8 +23,40 @@
            color: beige; 
         }
     }
+
+    & ul {
+        list-style: none;
+        & #wrap_li1 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+                & #li1 {
+                    animation: typing 8s steps(49, start) infinite;  
+                    white-space: nowrap;
+                    overflow: hidden;
+                    
+            }
+                & span {
+                    border-right: 2px solid rgba(255, 255, 255, 0.75);
+                    color: transparent;
+                    animation: blinkTextCorsur 500ms steps(40) infinite normal;
+                }
+        }
+        & #wrap_li2 {
+            & #li2 {
+                text-decoration: underline;
+                cursor: pointer;
+                &:hover {
+                    color: skyblue;
+                }
+            }
+            & span {
+                display: none;
+            }
+        }
+    }
+
     & ul li {
-        color: white;
         text-align: center;
         margin-bottom: 3px;
 
@@ -37,3 +72,75 @@
         }
     }
 }
+@media(max-width : 495px) {
+    
+    .container {
+        & ul {
+            & #wrap_li1 {
+                flex-wrap: wrap;
+               & #li1 {
+                animation: none;
+                white-space: normal; 
+                overflow: unset;
+                }
+                & span {
+                    display: none;
+                }
+            }
+            & #wrap_li2 {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                & #li2 {
+                    animation: typing 3s steps(16, start) infinite;
+                    /*blinkTextCorsur 500ms steps(40) infinite normal;*/
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                & span {
+                    display: inline;
+                    border-right: 2px solid rgba(255, 255, 255, 0.75);
+                    color: transparent;
+                    animation: blinkTextCorsur 500ms steps(40) infinite normal;
+                }
+            }    
+        }
+    }   
+}
+
+
+@keyframes typing {
+    
+    0% {
+        width: 0px;
+    }
+    60% {
+        width: 396px;
+    }
+    100% {width: 396px;}
+    
+  }
+
+  @media(max-width : 495px) {
+    @keyframes typing {
+    
+        0% {
+            width: 0px;
+        }
+        60% {
+            width: 138px;
+        }
+        100% {width: 138px;}   
+      }
+}
+
+  @keyframes blinkTextCorsur {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
+  }
+
+

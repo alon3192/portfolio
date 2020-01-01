@@ -1,6 +1,23 @@
 .background {
     background-image: url("../assets/images/background.jpg");
-    background-repeat: no-repeat;
+    
     background-size: cover;
     background-position: 0 100%;
+
+}
+
+.background2 {
+    background-image: url("../assets/images/foreground.png");
+    animation-name: moving;
+    animation-duration: 650s;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes moving {
+    0% {background-position: 0% 0%;}
+   
+    100% {background-position: 13000% 6000%;}
 }

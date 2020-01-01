@@ -2,6 +2,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.background1 {
+    background-image: url("../../assets/images/foreground.png");
+    animation-name: moving;
+    animation-duration: 650s;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 h4 {
     /*text-align: center;*/
     color: white;
@@ -56,6 +65,22 @@ h4:hover {
     }
 }
 
+@keyframes image_raise {
+    0% {
+        
+    }
+    50% {
+        margin-top: 0;
+    }
+   
+    100% {     
+    }   
+}
+@keyframes moving {
+    0% {background-position: 0% 0%;}
+   
+    100% {background-position: 13000% -600000%;}
+}
 
 @media(max-width : 58rem) {
 
@@ -95,19 +120,10 @@ h4:hover {
             width: 100%;
         }
     }
-    
-}
-@keyframes image_raise {
-    0% {
-        
-    }
-    50% {
-        margin-top: 0;
+    @keyframes moving {
+        0% {background-position: 0% 0%;}
+       
+        100% {background-position: 13000% 6000%;}
     }
    
-    100% {
-       
-        
-    }
-    
 }
