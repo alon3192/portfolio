@@ -1,10 +1,15 @@
 <div class="background1">
    <h4>My Projects</h4>
    <div class="cards" id="projects">
-      <div *ngFor="let project of projects; let i=index" class="card" (click)="projectClicked(project)">
+      <div *ngFor="let project of projects; let i=index" class="card">
          <img src="../../assets/images/{{project.image}}" alt="" id={{project.name}}>
          <h2> {{project.name}}</h2>
+         <div class="options">
+            <button id="git" (click)="openGit(project)">Git</button>
+            <button  (click)="projectClicked(project)">see project</button>
+         </div>
          <p>{{project.description}}</p>
+         
          <div class="border{{i}}"></div>
       </div>   
    </div>

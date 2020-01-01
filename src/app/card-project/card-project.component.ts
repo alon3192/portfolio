@@ -20,13 +20,9 @@ export class CardProjectComponent implements OnInit {
 
   projectClicked(project:Project)
   {
-    if(project.name === 'Shopping-list')
+    if(project.webSrc !== '')
     {
-      window.open('https://shopping-list-d9877.firebaseapp.com/');
-    }
-    else if(project.name === 'Meal Tracking')
-    {
-      window.open('https://meal-tracking-86b90.firebaseapp.com/');
+      window.open(project.webSrc);
     }
     else
     {
@@ -34,7 +30,13 @@ export class CardProjectComponent implements OnInit {
       window.scroll(0,0);
       this.router.navigate([project.name]);
     }
+   
   }
+
+   openGit(project:Project)
+   {
+     window.open(project.gitSrc);
+   }
 
   
   writeContent(project:Project)

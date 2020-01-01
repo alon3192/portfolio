@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   ngOnInit()
   {
     this.dataService.fetchProducts();
-   /* this.dataService.newEnteryToTheWebsite();*/
+    this.dataService.newEnteryToTheWebsite();
   }
   
 

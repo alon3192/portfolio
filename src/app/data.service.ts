@@ -14,10 +14,10 @@ export class DataService {
   constructor(private http:HttpClient) {}
 
   projects:Project [] = [
-    new Project("Safun", "safun_icon1.png", "An Android app for live reporting from entertainment places that helps users decide where to spend time."),
-    new Project("Gamefill", "soccer_icon1.png", "An app for the Android devices that write console games results. Displays various tables and statistics."),
-    new Project("Shopping-list", "shopping_icon1.png", "A project based on a website that helps organize the shopping list."),
-    new Project("Meal Tracking", "meal-tracking.png", "A project based on a website that allows to order food deliveries and then track the order."), 
+    new Project("Safun", "safun_icon1.png", "An Android app for Live reporting from entertainment places.", "https://github.com/alon3192/Safun", ""),
+    new Project("Gamefill", "soccer_icon1.png", "An android app for entering results and displayed them in various tables and statistics.", "https://github.com/alon3192/res", ""),
+    new Project("Shopping-list", "shopping_icon1.png", "A website project that helps organize the shopping list.", "https://github.com/alon3192/shopping-list", "https://shopping-list-d9877.firebaseapp.com/"),
+    new Project("Meal Tracking", "meal-tracking.png", "A website project that allows to order food deliveries and then tracking them.", "https://github.com/alon3192/meal-tracking", "https://meal-tracking-86b90.firebaseapp.com/"), 
   ];
 
   languages:Detail[] = [
