@@ -33,6 +33,15 @@
         margin: auto;
         margin-bottom: 15px;
         color: white;
+
+        & span {
+            text-decoration: underline;
+
+            &:hover {
+                color: skyblue;
+                cursor: pointer;
+            }
+        }
     }
     & .img_cont {
         display: flex;
