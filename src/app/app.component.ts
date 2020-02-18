@@ -13,8 +13,8 @@ export class AppComponent implements OnInit{
 
   ngOnInit()
   {
-   /* this.dataService.fetchDates();
-    this.dataService.newEnteryToTheWebsite();*/
+    this.dataService.fetchDates();
+    this.dataService.newEnteryToTheWebsite();
   }
   
 
