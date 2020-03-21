@@ -52,6 +52,7 @@ export class DataService {
 
 
   optionsChanged = new Subject<boolean>();
+  messageSended = new Subject<boolean>();
 
   arrivals:Date[] = [];
 
@@ -100,6 +101,16 @@ export class DataService {
     this.arrivals.push(d);
     this.http.post('https://portfolio-b36b9.firebaseio.com/newEntery.json',this.arrivals).subscribe(
       responseData=>{
+      })
+  }
+
+  newMessage(message:Object)  {
+    
+    this.http.post('https://portfolio-b36b9.firebaseio.com/newMessage.json', message).subscribe(
+      responseData=>{
+        this.messageSended.next(true);
+      }, error => {
+        this.messageSended.next(false);
       })
   }
 

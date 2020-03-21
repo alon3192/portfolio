@@ -20,7 +20,6 @@ export class AboutMeComponent implements OnInit {
    this.languages = this.dataService.getLanguages();
    this.workspaces = this.dataService.getWorkspaces();
    this.databases = this.dataService.getDatabases();
-   console.log(this.databases)
   }
   
 
