@@ -20,40 +20,75 @@ export class ContactComponent implements OnInit {
   sub;
   displayEmails:boolean = true;
   email='';
-
+  loader
+  check
+  answer:boolean
+  
   ngOnInit() {
 
     this.sent = document.getElementById("sent");
     this.sub = document.getElementById("sub");
     this.tmpEmails = [...this.emails];
-
+    
     this.subscription = this.dataService.messageSended.subscribe(
       (answer: boolean) => {
-          this.sub.disabled = true;
-        });
-
-        
-        document.addEventListener('DOMContentLoaded', function () {
-          var btn = document.querySelector('.button'),
-              loader = document.querySelector('.loader'),
-              check = document.querySelector('.check');
-          
-          btn.addEventListener('click', function () {
-            loader.classList.add('active'); 
-          });
+        console.log(answer)
+        this.answer = answer;
+  
+        if(answer) {
+          this.startAnimation();
+        }
+        else {
+          this.displayError();
+        }   
+      }); 
          
-          loader.addEventListener('animationend', function() {
-            check.classList.add('active'); 
-          });
-        });
-        
+       
+  }
+
+  displayError() {
+    
+  }
+
+  startAnimation() {
+    var loader = document.querySelector('.loader'),
+        check = document.querySelector('.check');
+        loader.classList.add('active'); 
+      loader.addEventListener('animationend', function() {
+        check.classList.add('active'); 
+     });
   }
 
   onSubmit(form:NgForm) {
-    console.log("dsa")
     
-    this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message }
-    this.dataService.newMessage(this.message)
+
+    if(!form.valid) {
+      if(form.value.name === '') {
+        document.getElementById("namefield").style.border = "1px red solid";
+      }
+      if(form.value.email1 === '') {
+        document.getElementById("email1field").style.border = "1px red solid";
+      }
+      if(form.value.email2 === '') {
+        document.getElementById("email2field").style.border = "1px red solid";
+      }
+      if(form.value.message === '') {
+        document.getElementById("textareafield").style.border = "1px red solid";
+      }
+    }
+    else {
+
+      document.getElementById("namefield").style.border = "unset";
+      document.getElementById("email1field").style.border = "unset";
+      document.getElementById("email2field").style.border = "unset";
+      document.getElementById("textareafield").style.border = "unset";
+
+      this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message }
+      this.dataService.newMessage(this.message);
+
+
+    }
+    
   }
 
   onChangeEmail() {
@@ -72,6 +107,8 @@ export class ContactComponent implements OnInit {
       this.displayEmails = false;
     }
   }
+
+
 
   ngOnDestroy()
   {

@@ -108,8 +108,10 @@ export class DataService {
     
     this.http.post('https://portfolio-b36b9.firebaseio.com/newMessage.json', message).subscribe(
       responseData=>{
+        console.log(responseData)
         this.messageSended.next(true);
       }, error => {
+        console.log(error)
         this.messageSended.next(false);
       })
   }

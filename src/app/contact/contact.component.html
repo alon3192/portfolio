@@ -4,27 +4,25 @@
 
                 <h2 class="container_contact-title">Contact me!</h2>
                 <p class="container_contact-paragraph">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the from and send me an email.</p>
-
-                <span class="container_contact-span">Name</span>
-                <input type="text" class="container_contact-input" ngModel name="name" autocomplete="off" required> 
-
+                    <span class="container_contact-span">Name</span>
+                    <input type="text" id="namefield" class="container_contact-input" ngModel name="name" autocomplete="off" required>    
                 <span class="container_contact-span">Email</span>
 
                 <div class="container_contact-email">
-                    <input type="text" class="container_contact-email-input" ngModel name="email1" autocomplete="off" required>
+                    <input type="text" class="container_contact-email-input" id="email1field" ngModel name="email1" autocomplete="off" required>
                     <div class="container_contact-email-sign_mail">@</div> 
-                    <input type="text" class="container_contact-email-input" list="options" ngModel [(ngModel)]="email" name="email2" autocomplete="off" (input)="onChangeEmail()" required>
+                    <input type="text" class="container_contact-email-input" id="email2field" list="options" ngModel [(ngModel)]="email" name="email2" autocomplete="off" (input)="onChangeEmail()" required>
                     <datalist id="options" *ngIf="displayEmails">
                         <option *ngFor="let email of tmpEmails"  value="{{email}}">
                     </datalist>
                 </div>
                 
                 <span class="container_contact-span">Message</span>
-                <textarea class="container_contact-textarea" cols="20" rows="5" ngModel name="message" required></textarea>
+                <textarea class="container_contact-textarea" id="textareafield" cols="20" rows="5" ngModel name="message" required></textarea>
              
 
                <div class="main">
-                    <button id="sub" class="button" type="submit" [disabled]="!f.valid">Send</button>
+                    <button id="sub" class="button" type="submit">Send</button>
                     <div class="loader">
                         <div class="check">
                             <span class="check-one"></span>
@@ -32,7 +30,7 @@
                         </div>
                     </div> 
               </div>
-            
+
         </div> 
     </div>
 </form>
