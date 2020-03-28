@@ -70,6 +70,7 @@ export class HeaderComponent implements OnInit {
     {
       window.location.hash = '';
       window.location.hash = section;
+      
     }
     
   }

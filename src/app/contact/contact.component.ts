@@ -83,7 +83,7 @@ export class ContactComponent implements OnInit {
       document.getElementById("email2field").style.border = "unset";
       document.getElementById("textareafield").style.border = "unset";
 
-      this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message }
+      this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message, date: new Date() }
       this.dataService.newMessage(this.message);
 
 
