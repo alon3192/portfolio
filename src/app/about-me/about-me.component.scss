@@ -42,6 +42,17 @@
     }
 }
 
+#languages, #workspaces, #databases {
+    opacity: 0;
+}
+.animation_offset {
+    animation-name: show_by_offset;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
 
 
 
@@ -63,6 +74,20 @@
     100% {
         transform: scale(1);
     }   
+}
+
+@keyframes show_by_offset {
+    0% { 
+        opacity: 0;
+        transform: rotateZ(15deg);
+        
+     }
+    100% { 
+        opacity: 1;
+        transform: rotateZ(0deg);
+        
+        
+     }
 }
 
 

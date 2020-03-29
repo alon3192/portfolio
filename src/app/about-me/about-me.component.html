@@ -1,27 +1,27 @@
 <div class="container" id="about">
     <div class="box">
-            <p>I have experimented with the programming languages listed below:</p>
+            <p id="languages">I have experimented with the programming languages listed below:</p>
     <div class="images_container">
         <div class="comment" *ngFor="let language of languages">
-            <div class="img_container" id="java" title="{{ language.title }}">
+            <div class="img_container" title="{{ language.title }}">
                 <img src="{{ language.imageSrc }}" alt="">
             </div> 
         </div>      
     </div>
     
-    <p>The programming languages are implemented by the workspaces listed below:</p>
-    <div class="images_container">
+    <p id="workspaces">The programming languages are implemented by the workspaces listed below:</p>
+    <div class="images_container" >
         <div class="comment" *ngFor="let workspace of workspaces">
-            <div class="img_container" id="java" title="{{ workspace.title }}">
+            <div class="img_container" title="{{ workspace.title }}">
                 <img src="{{ workspace.imageSrc }}" alt="">
             </div> 
         </div>  
   </div>
   
-  <p>I have experimented with the databases listed below:</p>
+  <p id="databases">I have experimented with the databases listed below:</p>
     <div class="images_container">
         <div class="comment" *ngFor="let database of databases">   
-            <div class="img_container" id="java" title="{{ database.title }}">
+            <div class="img_container" title="{{ database.title }}">
                 <img src="{{ database.imageSrc }}" alt="">
             </div> 
         </div>  
