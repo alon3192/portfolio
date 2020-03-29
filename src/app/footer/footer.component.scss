@@ -146,11 +146,18 @@
 }
 
 @keyframes arrow_show_animation {
-    from {right: -100px;}
-    to {right: 20px;}
+    from {right: -100px;
+        transform: rotateZ(160deg);
+    }
+   
+    to {right: 20px;
+        transform: rotateZ(0deg);
+    }
   }
 
   @keyframes arrow_hide_animation {
-    from {right: 20px;}
-    to {right: -100px;}
+    from {right: 20px;
+        transform: rotateZ(0deg)}
+    to {right: -100px;
+        transform: rotateZ(160deg)}
   }

@@ -9,12 +9,7 @@ import { Detail } from '../detail.model';
 })
 export class AboutMeComponent implements OnInit {
 
-  languages_scroll = document.getElementById("languages");
-  workspaces_scroll = document.getElementById("workspaces");
-  databases_scroll = document.getElementById("databases");
-  offset;
   
-
   constructor(private dataService:DataService) { }
 
 
@@ -32,11 +27,7 @@ export class AboutMeComponent implements OnInit {
   }
 
   scrollEvent() {
-   /* console.log(window.pageYOffset);
-    console.log(this.languages_scroll)*/
-    
-
- 
+  
     const height = window.innerHeight|| document.documentElement.clientHeight|| 
     document.body.clientHeight;
 

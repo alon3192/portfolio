@@ -16,6 +16,7 @@ export class CardProjectComponent implements OnInit {
   
   ngOnInit() {
     this.projects = this.dataService.getProjects();
+    
   }
 
   projectClicked(project:Project)

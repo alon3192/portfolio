@@ -26,6 +26,8 @@ export class ContactComponent implements OnInit {
   
   ngOnInit() {
 
+    window.addEventListener("scroll", this.scrollEvent)
+
     this.sent = document.getElementById("sent");
     this.sub = document.getElementById("sub");
     this.tmpEmails = [...this.emails];
@@ -105,6 +107,23 @@ export class ContactComponent implements OnInit {
 
     if(this.tmpEmails.length === 1 && this.email === this.tmpEmails[0]) {
       this.displayEmails = false;
+    }
+  }
+
+  scrollEvent() {
+  
+    const height = window.innerHeight|| document.documentElement.clientHeight|| 
+    document.body.clientHeight;
+
+
+    let currentOffset =  window.pageYOffset;
+    let languages_scroll = document.getElementById("text_contact");
+
+    if((currentOffset + height) > languages_scroll.offsetTop) {
+      languages_scroll.classList.add("animation_offset");
+    }
+    else {
+      languages_scroll.classList.remove("animation_offset");
     }
   }
 
