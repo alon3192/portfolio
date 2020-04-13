@@ -97,7 +97,7 @@ export class DataService {
   {
     
     const d: Date = new Date();
-    d.setHours(d.getHours()+2);
+    d.setHours(d.getHours()+3);
     this.arrivals.push(d);
     this.http.post('https://portfolio-b36b9.firebaseio.com/newEntery.json',this.arrivals).subscribe(
       responseData=>{
@@ -105,13 +105,11 @@ export class DataService {
   }
 
   newMessage(message:Object)  {
-    
+
     this.http.post('https://portfolio-b36b9.firebaseio.com/newMessage.json', message).subscribe(
       responseData=>{
-        console.log(responseData)
         this.messageSended.next(true);
       }, error => {
-        console.log(error)
         this.messageSended.next(false);
       })
   }

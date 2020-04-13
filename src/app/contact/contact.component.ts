@@ -63,7 +63,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit(form:NgForm) {
     
-
     if(!form.valid) {
       if(form.value.name === '') {
         document.getElementById("namefield").style.border = "1px red solid";
@@ -79,18 +78,16 @@ export class ContactComponent implements OnInit {
       }
     }
     else {
-
       document.getElementById("namefield").style.border = "unset";
       document.getElementById("email1field").style.border = "unset";
       document.getElementById("email2field").style.border = "unset";
       document.getElementById("textareafield").style.border = "unset";
 
-      this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message, date: new Date() }
+      let date = new Date();
+      date.setHours(date.getHours()+3);
+      this.message = { name : form.value.name, email : form.value.email1 + "@" + form.value.email2, message: form.value.message, date: date }
       this.dataService.newMessage(this.message);
-
-
-    }
-    
+    } 
   }
 
   onChangeEmail() {
