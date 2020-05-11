@@ -19,6 +19,7 @@ export class DataService {
     new Project("Shopping-list", "shopping_icon1.png", "A website that helps organize the shopping list.", "https://github.com/alon3192/shopping-list", "https://shopping-list-d9877.firebaseapp.com/"),
     new Project("Meal Tracking", "meal-tracking1.png", "A website that allows to order food deliveries and then tracking them.", "https://github.com/alon3192/meal-tracking", "https://meal-tracking-86b90.firebaseapp.com/"), 
     new Project("Weather Forecast", "forecast-weather1.png", "A website that shows the weather forecast by location or city in the world by choice.", "https://github.com/alon3192/Alon-Moshe-03-01-2020", "https://weather-8f3e1.firebaseapp.com/"), 
+    new Project("countries-quiz", "quiz.png", "A website that shows various quizzes about the countries world's countries.", "https://github.com/alon3192/countries-quiz", "https://quiz-9855b.firebaseapp.com/"),
   ];
 
   languages:Detail[] = [

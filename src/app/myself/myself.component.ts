@@ -14,7 +14,7 @@ export class MyselfComponent implements OnInit {
 
   openResume()
   {
-    window.open("https://drive.google.com/open?id=1QOwqCxkfnCuCVMbQieCwyUMtotXmNz8P");
+    window.open("https://drive.google.com/open?id=1Y92O97btiHBhl3FuInss1PGA2jioWMNK");
   }
 
 }

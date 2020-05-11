@@ -55,7 +55,7 @@ export class HeaderComponent implements OnInit {
 
   openResume()
   {
-    window.open("https://drive.google.com/open?id=1xZedRA-WoYHjDFMHrP-2NBuEnt21hUAK");
+    window.open("https://drive.google.com/open?id=1Y92O97btiHBhl3FuInss1PGA2jioWMNK");
   }
 
   setOptionsMode()
