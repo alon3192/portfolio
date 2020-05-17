@@ -22,10 +22,12 @@
     }
     & h2 {
         text-align: center;
-        margin: 0;
         color: white;
         margin-bottom: 10px;
         margin-top: 20px;
+        font-family: 'Bad Script', cursive;
+        font-size: 45px;
+        margin: 0;
     }
     & .description {
         padding: 15px;
@@ -33,6 +35,8 @@
         margin: auto;
         margin-bottom: 15px;
         color: white;
+        font-family: "Lemonada", cursive;
+        font-size: 14px;
     }
     & .img_cont {
         display: flex;

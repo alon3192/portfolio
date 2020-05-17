@@ -113,9 +113,9 @@ export class DataService {
       }, error => {
         this.messageSended.next(false);
       })
-  }
 
-  
+      
+  }
 
 
 }

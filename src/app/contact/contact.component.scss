@@ -4,7 +4,8 @@
     margin: 0 auto;
     color: white;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Lemonada', cursive;
+    font-size: 13.5px;
     margin-top: 10px;
     margin-bottom: 10px;
    
@@ -17,11 +18,20 @@
 
         &-title {
             margin: 10px;
+            font-family: "Lemonada", cursive;
+            font-size: 20px;
+            text-decoration: underline;
+            &:hover {
+              color: #92c1ff
+           }
         }
         &-paragraph {
             text-align: center;
             padding: 10px 10px;
             margin: 0;
+            &:hover {
+              color: #93bcf1
+           }
         }
 
         &-input  {
@@ -69,27 +79,6 @@
 
   .main {
       margin-top: 10px;
-      
-
-     /* & .button {
-        position: relative;
-        display: block;
-        width: 200px;
-        height: 36px;
-        border-radius: 18px;
-        background-color: #1c89ff;
-        border: solid 1px transparent;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 300;
-        cursor: pointer;
-        transition: all .1s ease-in-out;
-        &:hover {
-          background-color: transparent;
-          border-color: #fff;
-          transition: all .1s ease-in-out;
-        }
-      }*/
 
       & .button {
         position: relative;
@@ -104,6 +93,8 @@
         background-size: 400%;
         border-radius: 30px;
         z-index: 1;
+        font-family: "Lemonada", cursive;
+        font-size: 14px;
 
         &:hover {
           animation:animate 8s linear infinite;
@@ -219,11 +210,11 @@
   @keyframes show_by_offset {
     0% { 
         opacity: 0;
-        transform: rotateZ(15deg);   
+        /*transform: rotateZ(15deg);   */
      }
     100% { 
         opacity: 1;
-        transform: rotateZ(0deg);  
+       /* transform: rotateZ(0deg);  */
      }
 }
 

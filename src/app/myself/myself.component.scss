@@ -1,6 +1,7 @@
 * {
     font-family: 'Poppins', sans-serif;
     color: white;
+    font-family: 'Lemonada', cursive;
 }
 
 
@@ -18,14 +19,17 @@
         width: fit-content;
         margin-left: auto;
         margin-right: auto; 
+       font-size: 20px;
 
         &:hover {
-           color: beige; 
+           color: #6085b7
         }
     }
 
     & ul {
         list-style: none;
+        margin: 0;
+        
         & #wrap_li1 {
             text-align: center;
             display: flex;
@@ -59,6 +63,7 @@
     & ul li {
         text-align: center;
         margin-bottom: 3px;
+        font-size: 13.5px;
 
         & span {
             text-decoration: underline;
@@ -68,7 +73,7 @@
             }
         }
         &:hover {
-            color: rgb(153, 217, 134);
+            color: #6085b7
         }
     }
 }
