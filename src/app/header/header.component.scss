@@ -15,21 +15,24 @@
     font-family: 'Piedra', cursive;
 
     &_mode {
-        & .options {
-        list-style: none;
         display: flex;
-        right: 17%;
-        position: absolute;
-        padding: 0;
-        font-size: 1.2rem;
-        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 15%;
+        margin-right: 15%;
+        & .options {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            font-size: 1.2rem;
+            margin: 0;
+            order: 2;
         &:hover li {
           /*  transform: scale(1.5);*/
             opacity: 0.2;
             filter: blur(5px);
         }
             & li {
-                
                 margin-left: 35px;
                 cursor: pointer;
                 color: white;
@@ -68,14 +71,11 @@
            
         }
         & .head_line {
-        position: absolute;
-        top: 4px;
-        padding: 5px;
-        left: 17%;
-        font-size: 1.2rem;
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        color: white;
+            padding: 5px;
+            font-size: 1.2rem;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: white;
         }
     }
 
@@ -114,6 +114,8 @@
     
     .header {
         &_mode {
+            margin-left: 2%;
+            margin-right: 2%;
             & .options {
                 display: none;
             }
@@ -126,10 +128,7 @@
         }
         & #sidebar {
             display: block;
-            position: absolute;
-            width: auto;
-            height: auto;
-            right: 8%;
+
             
             & img {
                 width: 65%;
