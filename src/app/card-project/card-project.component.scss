@@ -108,12 +108,6 @@ h4:hover {
                     background: rgb(150, 174, 207);
                     opacity: 1;
                     filter: blur(0);
-    
-                    &::before {
-                        transition: transform 0.5s;
-                        transform-origin: bottom;
-                        transform: scaleX(1);
-                    }
                 }
             }
         }

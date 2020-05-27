@@ -39,14 +39,5 @@ export class CardProjectComponent implements OnInit {
      window.open(project.gitSrc);
    }
 
-  
-  writeContent(project:Project)
-  {
-    if(project.name === 'Shopping-list')
-    {
-      return "Website";
-    }
-    return "Android App";
-  }
 
 }
