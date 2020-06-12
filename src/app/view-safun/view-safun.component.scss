@@ -62,9 +62,17 @@
     & #forward {
         order: 1;
         cursor: pointer;
+        animation: slide_1;
+        animation-duration: 2s;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
     }
     & #back {
         cursor: pointer;
+        animation: slide_2;
+        animation-duration: 2s;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
     }
 
     .moving_forward {
@@ -90,6 +98,16 @@
         51% { left: 1300px; }
         100% { left: 0px; }
     }
+    @keyframes slide_1 {
+       0% { transform: translate(0); }
+       50% { transform: translate(40px); }
+       100% { transform: translate(0px); }
+    }
+    @keyframes slide_2 {
+        0% { transform: translate(0); }
+        50% { transform: translate(-40px); }
+        100% { transform: translate(0px); }
+     }
 
 }
 .upload {
