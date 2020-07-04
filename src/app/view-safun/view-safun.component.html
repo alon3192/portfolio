@@ -9,12 +9,14 @@
         In addition, you can report on other issues such as parking, prices, music, photo upload option and more.
         For more information, you can <span (click)="onOpenProjextBook()">click here</span> to browse the project book.</p>
 
-
-    <div class="img_cont">  
-        <img src="../../assets/images/safun_1.jpg" alt="" class="image_appp" id="image">
+    <div class="images_cont">
+        <img src="../../assets/images/arrow_back.png" alt="" id="back" (click)="goBack()"> 
+        <div class="img_cont">  
+            <img src="../../assets/images/safun_1.jpg" alt="" class="image_appp" id="image">
+        </div>
+        <img src="../../assets/images/arrow_forward.png" alt="" id="forward" (click)="goForward()">
     </div>
-    <img src="../../assets/images/arrow_back.png" alt="" id="back" (click)="goBack()">
-    <img src="../../assets/images/arrow_forward.png" alt="" id="forward" (click)="goForwoard()">
+  
 </div>
 
 <div class="upload">

@@ -21,7 +21,7 @@ export class ViewSafunComponent implements OnInit {
   }
 
   
-  goForwoard()
+  goForward()
   {
     if(this.currentNumber === this.maxNumber)
     {

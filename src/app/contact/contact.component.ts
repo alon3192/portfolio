@@ -116,12 +116,16 @@ export class ContactComponent implements OnInit {
     let currentOffset =  window.pageYOffset;
     let languages_scroll = document.getElementById("text_contact");
 
-    if((currentOffset + height) > languages_scroll.offsetTop) {
-      languages_scroll.classList.add("animation_offset");
+    if(languages_scroll !=null) {
+      if((currentOffset + height) > languages_scroll.offsetTop) {
+        languages_scroll.classList.add("animation_offset");
+      }
+      else {
+        languages_scroll.classList.remove("animation_offset");
+      }
     }
-    else {
-      languages_scroll.classList.remove("animation_offset");
-    }
+
+
   }
 
 

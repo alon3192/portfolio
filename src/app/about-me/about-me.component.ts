@@ -36,26 +36,33 @@ export class AboutMeComponent implements OnInit {
     let languages_scroll = document.getElementById("languages");
     let workspaces_scroll = document.getElementById("workspaces");
     let databases_scroll = document.getElementById("databases");
-
-    if((currentOffset + height) > languages_scroll.offsetTop) {
-      languages_scroll.classList.add("animation_offset");
+    
+      if(languages_scroll!=null) {
+          if((currentOffset + height) > languages_scroll.offsetTop) {
+            languages_scroll.classList.add("animation_offset");
+          }
+          else {
+            languages_scroll.classList.remove("animation_offset");
+          }
+      }
+      if(workspaces_scroll!=null) {
+          if((currentOffset + height) > workspaces_scroll.offsetTop) {
+            workspaces_scroll.classList.add("animation_offset");
+          }
+          else {
+            workspaces_scroll.classList.remove("animation_offset");
+          }
+      }
+      if(databases_scroll != null) {
+          if((currentOffset + height) > databases_scroll.offsetTop) {
+            databases_scroll.classList.add("animation_offset");
+          }
+          else {
+            databases_scroll.classList.remove("animation_offset");
+          }
+      }
     }
-    else {
-      languages_scroll.classList.remove("animation_offset");
-    }
-    if((currentOffset + height) > workspaces_scroll.offsetTop) {
-      workspaces_scroll.classList.add("animation_offset");
-    }
-    else {
-      workspaces_scroll.classList.remove("animation_offset");
-    }
-    if((currentOffset + height) > databases_scroll.offsetTop) {
-      databases_scroll.classList.add("animation_offset");
-    }
-    else {
-      databases_scroll.classList.remove("animation_offset");
-    }
-  }
+  
   
 
 }
