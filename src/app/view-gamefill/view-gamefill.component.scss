@@ -117,3 +117,8 @@
 .upload {
     display: none;
 }
+@media(max-width : 600px) {
+    #img_cont {
+        height: 350px;
+    }
+}
